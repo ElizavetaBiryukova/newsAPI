@@ -1,6 +1,13 @@
-import AppLoader from './appLoader';
+import Loader from './loader';
+import { URLconfig } from '../../types';
 
-class AppController extends AppLoader {
+class AppController extends Loader {
+    constructor() {
+        super(URLconfig.baselink, {
+            apiKey: URLconfig.apiKey, // получите свой ключ https://newsapi.org/
+        });
+    }
+
     getSources<T>(callback: (data: T) => void): void {
         super.getResp(
             {

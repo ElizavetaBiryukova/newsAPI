@@ -170,14 +170,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
 }
 
 @media (min-width: 2150px) {
     .news {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-       row-gap: 40px;
+        row-gap: 40px;
     }
-
 }

@@ -33,11 +33,21 @@ export interface NewsStatus {
     articles: Array<NewsInterface>;
 }
 
-export interface getResp {
+export interface GetResp {
     endpoint: string;
     options?: Partial<Options>;
 }
 
 interface Options {
     sources: string | null;
+}
+
+export enum ErrorStatus {
+    Unauthorized = 401,
+    NotFound = 404,
+}
+
+export enum URLconfig {
+    baselink = 'https://rss-news-api.onrender.com/',
+    apiKey = '0db2469fadcc42e38b7d833cf5bae597',
 }

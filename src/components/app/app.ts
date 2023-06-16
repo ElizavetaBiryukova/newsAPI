@@ -6,10 +6,9 @@ class App {
     constructor(private controller = new AppController(), private view = new AppView()) {}
 
     public start(): void {
-        (document.querySelector('.sources') as HTMLElement).addEventListener('click', (e) =>
-            this.controller.getNews(e, (data: NewsStatus) => this.view.drawNews(data))
-        );
-
+        (document.querySelector('.sources') as HTMLElement).addEventListener('click', (e) => {
+            this.controller.getNews(e, (data: NewsStatus) => this.view.drawNews(data));
+        });
         const attribute = 'start';
         this.controller.getSources((data: NewsApi) => this.view.drawSources(data, attribute));
         this.view.drawFilter();

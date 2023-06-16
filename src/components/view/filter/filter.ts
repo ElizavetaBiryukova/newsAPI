@@ -1,11 +1,11 @@
 import './filter.css';
+import { letters } from '../../../util/const';
 
 class Filter {
     draw(): void {
         const fragment: DocumentFragment = document.createDocumentFragment();
         const filterItemTemp: HTMLTemplateElement = document.querySelector('#filterItemTemp') as HTMLTemplateElement;
 
-        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         const values = ['start', 'all', ...letters.split('')];
 
         values.forEach((item: string) => {
